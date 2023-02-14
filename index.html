@@ -6,9 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evan Weiss Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
     <link rel="manifest" href="./assets/site.webmanifest" />
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
@@ -26,54 +40,59 @@
     </script>
   </head>
   <body>
+    <nav onmousemove="moveBackground(event)">
+      <div class="row max-width">
+        <div class="nav__container">
+          <figure>
+            <img id="personal-logo" src="./assets/logo.svg" alt="" />
+          </figure>
+          <ul class="nav__link--list">
+            <li class="nav__link" onclick="toggleModal()">
+              <a
+                href="#"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >About</a
+              >
+            </li>
+            <li class="nav__link">
+              <a
+                href="#projects"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >Projects</a
+              >
+            </li>
+            <li class="nav__link">
+              <a
+                href="#"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                onclick="toggleModal()"
+                >Contact</a
+              >
+            </li>
+            <li class="nav__link click" onclick="toggleContrast()">
+              <a
+                href="#"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                ><i class="fas fa-adjust"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <section id="landing-page" onmousemove="moveBackground(event)">
-      <nav>
-        <figure>
-          <img id="personal-logo" src="./assets/logo.svg" alt="" />
-        </figure>
-        <ul class="nav__link--list">
-          <li class="nav__link" onclick="toggleModal()">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >About</a
-            >
-          </li>
-          <li class="nav__link">
-            <a
-              href="#projects"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Projects</a
-            >
-          </li>
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              onclick="toggleModal()"
-              >Contact</a
-            >
-          </li>
-          <li class="nav__link click" onclick="toggleContrast()">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              ><i class="fas fa-adjust"></i
-            ></a>
-          </li>
-        </ul>
-      </nav>
-
+      <div class="background-shape"></div>
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hey</h1>
-          <h1 class="title title--secondary blue">I'm Evan.</h1>
+          <h1 class="title title--secondary gradient">I'm Evan.</h1>
           <p class="header__para">
-            I'm a <b class="blue"> Frontend Software Engineer</b> with a strong
-            passion for building web applications with great user experiences.
+            I'm a <b class="gradient"> Frontend Software Engineer</b> with a
+            strong passion for building web applications with great user
+            experiences.
             <br />
             Here's a bit more
-            <b class="blue click" onclick="toggleModal()"> about me.</b>
+            <b class="gradient click" onclick="toggleModal()"> about me.</b>
           </p>
           <div class="social__list">
             <a href="" class="social__link click">
@@ -106,12 +125,13 @@
           </h4>
           <p class="modal__para">
             I'm a 18 year-old American,
-            <b class="blue">learning frontend software engineer</b> with a
+            <b class="gradient">learning frontend software engineer</b> with a
             passion to learn about and create
-            <b class="blue">modern websites</b> <br />
+            <b class="gradient">modern websites</b> <br />
             I am currently working on challenging engineering problems and learn
             from a team consisting of the worlds most
-            <b class="blue">experienced</b> and <b class="blue">talented</b>
+            <b class="gradient">experienced</b> and
+            <b class="gradient">talented</b>
             software engineers.
           </p>
           <div class="modal__languages">
@@ -196,20 +216,17 @@
       <img src="./assets/circle.svg" class="shape shape--7" />
       <img src="./assets/semi circle.svg" class="shape shape--8" />
     </section>
+
     <section id="projects" onmousemove="moveBackground(event)">
       <div class="container">
         <div class="row">
           <h1 class="section__title">
-            Here are some of my <span class="blue">projects</span>
+            Here are some of my <span class="gradient">projects</span>
           </h1>
           <ul class="project__list">
             <li class="project">
               <div class="project__wrapper">
-                <img
-                  src="./assets/blinker mockup.png"
-                  class="project__img"
-                  alt=""
-                />
+                <img src="./assets/project2.png" class="project__img" alt="" />
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">Car Sales Project</h3>
@@ -234,11 +251,7 @@
             </li>
             <li class="project">
               <div class="project__wrapper">
-                <img
-                  src="./assets/blinker mockup.png"
-                  class="project__img"
-                  alt=""
-                />
+                <img src="./assets/project1.png" class="project__img" alt="" />
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">Car Sales Project</h3>
